@@ -27,6 +27,7 @@
 
 ### CoachRestController
 Handles API requests related to **life coaches**.
+
 **Endpoints**
 
 1. **Create Coach**
