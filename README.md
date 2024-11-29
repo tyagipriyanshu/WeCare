@@ -25,7 +25,7 @@
 
 <summary><h2>API Documentation</h2></summary>
 
-`### CoachRestController`
+> ### CoachRestController
 Handles API requests related to **life coaches**.
 
 **Endpoints**
