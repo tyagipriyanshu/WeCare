@@ -24,7 +24,7 @@ WeCARE is an online life coaching platform that allows users to sign up, view av
 ### User Table
 | Column |	Data Type |	Description |
 | ------------- | ------------- |------------ |
-|user_id	|String|	Unique User ID|
+|`user_id`	|String|	Unique User ID|
 |`name`|	String|	User's Full Name|
 |`gender`|	String|	User's Gender|
 |`date_of_birth`|	LocalDate	|User's Date of Birth|
