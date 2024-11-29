@@ -23,6 +23,7 @@ WeCARE is an online life coaching platform that allows users to sign up, view av
 Database Schema
 User Table
 | Column |	Data Type |	Description |
+| ------------- | ------------- |------------ |
 |user_id	|String|	Unique User ID|
 |name|	String|	User's Full Name|
 |gender|	String|	User's Gender|
