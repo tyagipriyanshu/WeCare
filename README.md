@@ -38,7 +38,7 @@
 ### Booking API
 * POST `/users/{userId}/booking/{coachId}`: Book an appointment.
 * PUT `/booking/{bookingId}`: Reschedule an appointment.
-* DELETE /`booking/{bookingId}`: Cancel an appointment.
+* DELETE `/booking/{bookingId}`: Cancel an appointment.
 
 ## Database Schema
 
