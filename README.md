@@ -15,7 +15,7 @@
 
 ## Technologies Used
 * **Backend**: Spring Boot (Spring REST)
-* **Database**: PostgreSQL (or another relational database)
+* **Database**: MySQL (or another relational database)
 * **Authentication**: JWT (JSON Web Tokens)
 * **Email Service**: Email notifications for appointment status
 * **Dependency Management**: Maven
