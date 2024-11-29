@@ -22,20 +22,20 @@
 * **Others**: JPA, Hibernate, Spring Security
 
 ## API Endpoints
-### User API
+> ### User API
 * POST `/users`: Register a new user.
 * POST `/users/login`: User login.
 * GET `/users/{userId}`: Get user profile.
 * GET `/users/booking/{userId}`: Get user's upcoming appointments.
 
-### Coach API
+> ### Coach API
 * POST `/coaches`: Register a new coach.
 * POST `/coaches/login`: Coach login.
 * GET `/coaches/{coachId}`: Get coach profile.
 * GET `/coaches/all`: List all coaches.
 * GET `/coaches/booking/{coachId}`: Get coach’s upcoming schedule.
 
-### Booking API
+> ### Booking API
 * POST `/users/{userId}/booking/{coachId}`: Book an appointment.
 * PUT `/booking/{bookingId}`: Reschedule an appointment.
 * DELETE /`booking/{bookingId}`: Cancel an appointment.
