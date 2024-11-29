@@ -21,115 +21,26 @@
 * **Dependency Management**: Maven
 * **Others**: JPA, Hibernate, Spring Security
 
-<details>
+## API Endpoints
+### User API
+* POST `/users`: Register a new user.
+* POST `/users/login`: User login.
+* GET `/users/{userId}`: Get user profile.
+* GET `/users/booking/{userId}`: Get user's upcoming appointments.
 
-<summary><h2>API Documentation</h2></summary>
+### Coach API
+* POST `/coaches`: Register a new coach.
+* POST `/coaches/login`: Coach login.
+* GET `/coaches/{coachId}`: Get coach profile.
+* GET `/coaches/all`: List all coaches.
+* GET `/coaches/booking/{coachId}`: Get coach’s upcoming schedule.
 
-> ### CoachRestController
-Handles API requests related to **life coaches**.
+### Booking API
+* POST `/users/{userId}/booking/{coachId}`: Book an appointment.
+* PUT `/booking/{bookingId}`: Reschedule an appointment.
+* DELETE /`booking/{bookingId}`: Cancel an appointment.
 
-**Endpoints**
-
-1. **Create Coach**
-* Request Type: `POST`
-* API Path: `/coaches`
-* Request Body: `CoachDTO coachDTO`
-* Response: `ResponseEntity<String>`
-* Description: Creates a new coach. If validation passes, returns the coach ID. If validation fails, returns error messages.
-
-2. **Login Coach**
-* Request Type: `POST`
-* API Path: `/coaches/login`
-* Request Body: `LoginDTO loginDTO`
-* Response: `ResponseEntity<Boolean>`
-* Description: Logs in an existing coach. Returns true if credentials are correct, otherwise false.
-
-3. **Get Coach Profile**
-* Request Type: `GET`
-* API Path: `/coaches/{coachId}`
-* Path Variable: `coachId`
-* Response: `ResponseEntity<CoachDTO>`
-* Description: Retrieves the profile of a coach by coachId.
-
-4. **Show All Coaches**
-* Request Type: `GET`
-* API Path: `/coaches/all`
-* Response: `List<CoachDTO>`
-* Description: Retrieves a list of all available life coaches.
-
-5. **Show My Schedule**
-* Request Type: GET`
-* API Path: `/coaches/booking/{coachId}`
-* Path Variable: `coachId`
-* Response: `List<BookingDTO>`
-* Description: Retrieves a list of upcoming appointments for the specified coach.
-
-> ### UserRestController
-Handles API requests related to **users**.
-
-**Endpoints**
-
-1. **Create User**
-* Request Type: `POST`
-* API Path: `/users`
-* Request Body: `UserDTO userDTO`
-* Response: `ResponseEntity<String>`
-* Description: Creates a new user. Returns the user ID upon success, or validation error messages if the request fails.
-
-2. **Login User**
-* Request Type: `POST`
-* API Path: `/users/login`
-* Request Body: `LoginDTO loginDTO`
-* Response: `ResponseEntity<Boolean>`
-* Description: Logs in an existing user. Returns true if credentials are correct, otherwise false.
-
-3. **Get User Profile**
-* Request Type: `GET`
-* API Path: `/users/{userId}`
-* Path Variable: `userId`
-* Response: `ResponseEntity<UserDTO>`
-* Description: Retrieves the profile of the user by userId.
-
-3. **Show My Appointments**
-* Request Type: `GET`
-* API Path: `/users/booking/{userId}`
-* Path Variable: `userId`
-* Response: `List<BookingDTO>`
-* Description: Retrieves a list of upcoming appointments for the specified user.
-
-> ### BookRestController
-Handles API requests related to **appointments**.
-
-**Endpoints**
-
-1. **Book Appointment**
-* Request Type: `POST`
-* API Path: `/users/{userId}/booking/{coachId}`
-* Path Variables: `userId, coachId`
-* Request Body: `String slot, LocalDate dateOfAppointment`
-* Response: `ResponseEntity<Boolean>`
-* Description: Books an appointment for a user with a specified coach, date, and time slot.
-
-2. **Reschedule Appointment**
-* Request Type: `PUT`
-* API Path: `/booking/{bookingId}`
-* Path Variable: `bookingId`
-* Request Body: `String slot, LocalDate dateOfAppointment`
-* Response: `ResponseEntity<Boolean>`
-* Description: Reschedules an existing appointment with a new time slot.
-
-3. **Cancel Appointment**
-* Request Type: `DELETE`
-* API Path: `/booking/{bookingId}`
-* Path Variable: `bookingId`
-* Response: `ResponseEntity<?>`
-* Description: Cancels an existing appointment.
-
-</details>
-
-<details>
-
-<summary><h2>Database Schema</h2></summary>
+## Database Schema
 
 ### User Table
 | Column |	Data Type |	Description |
@@ -166,7 +77,6 @@ Handles API requests related to **appointments**.
 |`appointment_date`	|LocalDate	|Date of the scheduled appointment|
 |`slot`	|String|	Time slot for the appointment|
 
-</details>
 
 
 
