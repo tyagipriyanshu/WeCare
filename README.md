@@ -64,7 +64,7 @@ Handles API requests related to **life coaches**.
 * Response: `List<BookingDTO>`
 * Description: Retrieves a list of upcoming appointments for the specified coach.
 
-### UserRestController
+> ### UserRestController
 Handles API requests related to **users**.
 
 **Endpoints**
@@ -97,7 +97,7 @@ Handles API requests related to **users**.
 * Response: `List<BookingDTO>`
 * Description: Retrieves a list of upcoming appointments for the specified user.
 
-### BookRestController
+> ### BookRestController
 Handles API requests related to **appointments**.
 
 **Endpoints**
