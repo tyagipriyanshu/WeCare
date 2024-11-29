@@ -23,7 +23,7 @@ WeCARE is an online life coaching platform that allows users to sign up, view av
 
 <details>
 
-<summary>**API Documentation**</summary>
+<summary><h1>API Documentation</h1></summary>
 
 ### CoachRestController
 Handles API requests related to **life coaches**.
@@ -125,33 +125,6 @@ Handles API requests related to **appointments**.
 * Description: Cancels an existing appointment.
 
 </details>
-
-Getting Started
-
-1. Clone the Repository
-git clone https://github.com/yourusername/wecare-backend.git
-2. Install Dependencies
-Ensure you have Maven installed and run the following command:
-
-mvn install
-3. Set Up Database
-Set up a relational database (e.g., PostgreSQL).
-Update the application.properties file with your database connection details:
-spring.datasource.url=jdbc:postgresql://localhost:5432/wecaredb
-spring.datasource.username=your-db-username
-spring.datasource.password=your-db-password
-spring.jpa.hibernate.ddl-auto=update
-4. Set Up Email Service (Optional)
-If you're using an email service like SendGrid or Mailgun, configure it in the application.properties:
-
-spring.mail.host=smtp.mailtrap.io
-spring.mail.username=your-email-username
-spring.mail.password=your-email-password
-5. Run the Application
-To run the Spring Boot application, execute the following:
-
-mvn spring-boot:run
-The application will be available at http://localhost:8080.
 
 
 ## Database Schema
